@@ -1,0 +1,14 @@
+.git
+.gradle
+.idea
+.codex
+.agents
+.aws
+build
+uploads
+upload-files
+.env
+.env.*
+application-local.properties
+*.iml
+.DS_Store

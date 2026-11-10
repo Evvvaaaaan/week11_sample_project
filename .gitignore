@@ -5,4 +5,5 @@ build/
 uploads/
 upload-files/
 .env
+application-local.properties
 .DS_Store

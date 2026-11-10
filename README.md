@@ -8,7 +8,17 @@ Spring Boot + Thymeleaf + JPA + MariaDB: 게시글 CRUD / 다중 첨부파일 �
 3. Gradle이 설치된 환경: `gradle bootRun` / IntelliJ: `AttachmentBoardApplication.main()` 실행.
 4. 접속: http://localhost:8080/posts
 
-> Gradle Wrapper는 이 ZIP에 포함되어 있지 않습니다. IntelliJ의 Gradle 지원 또는 설치된 Gradle을 사용하세요. `gradle wrapper` 실행 후 생성된 wrapper 파일은 Git에 포함하는 것을 권장합니다.
+### School MariaDB connection
+
+Create `application-local.properties` in the project root with your DBeaver connection details:
+
+```properties
+spring.datasource.url=jdbc:mariadb://walab.handong.edu:3306/W26_22300404
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
+```
+
+This local file is excluded from Git and overrides the default database settings. Run `./gradlew bootRun` from the project root, or run `AttachmentBoardApplication` in IntelliJ with the project root as its working directory. Open http://localhost:8080/posts after startup completes. Hibernate creates or updates the `posts` and `attachments` tables in the selected database.
 
 ## 구현된 기능
 - 게시글 목록 / 생성 / 상세 / 수정 / 삭제
